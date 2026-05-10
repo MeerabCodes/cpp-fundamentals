@@ -902,16 +902,14 @@ int main()
                 // logout
                 continue; // go back to role selection menu
             }
-
-            else if (role == 3)
-            {
-                break;
-            }
-            else
-            {
-                cout << "you chosed an invalid option!" << endl;
-            }
+        }
+        else if (role == 3)
+        {
+            break;
+        }
+        else
+        {
+            cout << "you chosed an invalid option!" << endl;
         }
     }
-    return 0;
 }
