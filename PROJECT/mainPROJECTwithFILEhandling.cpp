@@ -21,7 +21,7 @@ string carStatusArr[Totalcars];
 string buyernameArr[Totalcars];
 string customerName;
 
-//file handling functions
+// file handling functions
 
 // This function saves ALL car data into a text file
 void saveToFile()
@@ -39,7 +39,7 @@ void saveToFile()
     for (int i = 0; i < currentcar; i++)
     {
         // Each car's data is written line by line
-        
+
         file << carNamesArr[i] << "\n";
         file << carModelArr[i] << "\n";
         file << carColourArr[i] << "\n";
@@ -65,7 +65,7 @@ void loadFromFile()
 
     if (!file)
     {
-        // File doesn't exist yet 
+        // File doesn't exist yet
         cout << "No saved data found. Starting fresh!" << endl;
         return;
     }
@@ -75,13 +75,13 @@ void loadFromFile()
 
     for (int i = 0; i < currentcar; i++)
     {
-        getline(file, carNamesArr[i]);//to get full line including spaces
+        getline(file, carNamesArr[i]); // to get full line including spaces
         getline(file, carModelArr[i]);
         getline(file, carColourArr[i]);
         getline(file, carConditionArr[i]);
         getline(file, carTypeArr[i]);
         file >> carMillingArr[i];
-        file.ignore();//to skip the newline after reading an int
+        file.ignore(); // to skip the newline after reading an int
         getline(file, carPaintcondArr[i]);
         getline(file, carRegistryyrArr[i]);
         file >> carPriceArr[i];
@@ -95,7 +95,7 @@ void loadFromFile()
     cout << "Data loaded successfully! (" << currentcar << " cars found)" << endl;
 }
 
-//all the functions for admin and customer operations
+// all the functions for admin and customer operations
 
 void displayHeader()
 {
